@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GiphiApp</string>
+    <string name="api"></string>
 </resources>

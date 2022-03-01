@@ -11,6 +11,8 @@ import com.example.giphiapp.R
 import com.example.giphiapp.model.GiphiModel
 
 class MyViewHolderGiphi(private val context: Context, private val movieList: GiphiModel): RecyclerView.Adapter<MyViewHolderGiphi.MyViewHolder>() {
+
+
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 val ImageGiphy: ImageView = itemView.findViewById(R.id.ImageGiphy)
 
@@ -21,6 +23,7 @@ fun bind(movieList: GiphiModel){
 
 
     }
+
 
     override fun getItemCount(): Int {
 

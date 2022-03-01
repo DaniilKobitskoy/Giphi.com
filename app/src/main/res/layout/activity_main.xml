@@ -4,7 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
+
+   <include
+       android:id="@+id/search"
+       layout="@layout/toolbarsearch" />
 
    <androidx.recyclerview.widget.RecyclerView
 
@@ -12,6 +17,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
 
-       />
+       android:layout_below="@+id/search"
+       android:layout_marginTop="14dp" />
 
 </RelativeLayout>

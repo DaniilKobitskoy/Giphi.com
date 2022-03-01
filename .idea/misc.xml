@@ -3,8 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GiphiApp/app/src/main/res/drawable/backgroundstyle1.xml" value="0.125" />
+        <entry key="..\:/GiphiApp/app/src/main/res/drawable/backgroundstyle2.xml" value="0.125" />
+        <entry key="..\:/GiphiApp/app/src/main/res/drawable/backgroundstyle3.xml" value="0.125" />
         <entry key="..\:/GiphiApp/app/src/main/res/layout/activity_main.xml" value="0.182518115942029" />
-        <entry key="..\:/GiphiApp/app/src/main/res/layout/item_giphy.xml" value="0.182518115942029" />
+        <entry key="..\:/GiphiApp/app/src/main/res/layout/activity_search.xml" value="0.264" />
+        <entry key="..\:/GiphiApp/app/src/main/res/layout/activity_search_actv.xml" value="0.11302083333333333" />
+        <entry key="..\:/GiphiApp/app/src/main/res/layout/item_giphy.xml" value="0.176" />
+        <entry key="..\:/GiphiApp/app/src/main/res/layout/toolbarsearch.xml" value="0.4" />
+        <entry key="..\:/SDK/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.10416666666666667" />
       </map>
     </option>
   </component>
