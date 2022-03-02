@@ -7,12 +7,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/conture">
 
         <ImageView
             android:id="@+id/ImageGiphy"
             android:layout_width="match_parent"
             android:layout_height="400dp"
+            android:paddingLeft="2dip"
+            android:paddingTop="2dip"
+            android:paddingRight="2dip"
+            android:paddingBottom="2dip"
             android:scaleType="centerCrop" />
 
     </RelativeLayout>
