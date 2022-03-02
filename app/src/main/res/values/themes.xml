@@ -15,9 +15,9 @@
     </style>
 
     <style name="CardViewStyle" parent="CardView">
-        <item name="android:startColor">#DEB887</item>
-        <item name="android:centerColor">#B0C4DE</item>
-        <item name="android:endColor">#87CEFA</item>
+        <item name="android:bottomLeftRadius">10dp</item>
+        <item name="android:bottomRightRadius">10dp</item>
+
     </style>
 
 </resources>

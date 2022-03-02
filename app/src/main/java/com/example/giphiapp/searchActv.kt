@@ -26,7 +26,7 @@ class searchActv : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_actv)
-var backButton1 = findViewById<ImageView>(R.id.backButton1)
+        var backButton1 = findViewById<ImageView>(R.id.backButton1)
         backButton1.setOnClickListener {
 
             val intent = Intent(this, GiphyAct::class.java)
@@ -40,7 +40,7 @@ var backButton1 = findViewById<ImageView>(R.id.backButton1)
         recycler_item1.layoutManager = layoutManager1
 
         var q1: String = intent.getStringExtra(SEARCH_KEY)!!
-var txtResult2 = findViewById<TextView>(R.id.txtResult2)
+        var txtResult2 = findViewById<TextView>(R.id.txtResult2)
         txtResult2.setText(q1)
         getAllMovieList1(q1)
     }
@@ -51,16 +51,13 @@ var txtResult2 = findViewById<TextView>(R.id.txtResult2)
             override fun onResponse(call: Call<SearchGiphi>, response: Response<SearchGiphi>) {
                 adapter3 = AdapterSearch(baseContext, response.body() as SearchGiphi)
                 adapter3.notifyDataSetChanged()
-                Log.i("TAG2", response.body().toString())
-
+                Log.i("TAGSearch", response.body().toString())
                 recycler_item1.adapter = adapter3
-
                 recycler_item1.layoutManager =
                     LinearLayoutManager(this@searchActv, LinearLayoutManager.VERTICAL, false)
             }
 
             override fun onFailure(call: Call<SearchGiphi>, t: Throwable) {
-
                 val toast = Toast.makeText(this@searchActv, "vvvv", Toast.LENGTH_SHORT).show()
             }
         })

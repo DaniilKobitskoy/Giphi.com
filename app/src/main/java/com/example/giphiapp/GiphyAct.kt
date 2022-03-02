@@ -28,7 +28,7 @@ class GiphyAct : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_giphy)
         var editText = findViewById<EditText>(R.id.edtText)
-//
+
         mService = Common.retrofitService
         recycler_item.setLayoutManager(GridLayoutManager(this, 2))
         recycler_item.setHasFixedSize(true)
@@ -53,18 +53,13 @@ class GiphyAct : AppCompatActivity() {
                 val toast = Toast.makeText(this@GiphyAct, "vvvv", Toast.LENGTH_SHORT).show()
             }
         })
-
     }
-
     fun goToNewView(view: View) {
-
         when (view.getId()) {
             R.id.buttonSearch1 -> {
-
                 val intent = Intent(this, searchActv::class.java)
                 val editText = findViewById<EditText>(R.id.edtText)
                 intent.putExtra(SEARCH_KEY, editText.text.toString())
-
                 startActivity(intent)
             }
             else -> {
