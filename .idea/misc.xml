@@ -13,12 +13,17 @@
         <entry key="..\:/GiphiApp/app/src/main/res/layout/item_giphy.xml" value="0.176" />
         <entry key="..\:/GiphiApp/app/src/main/res/layout/toolbarsearch.xml" value="0.4" />
         <entry key="..\:/SDK/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.10416666666666667" />
+        <entry key="app/src/main/res/drawable/backbutton.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/backbutton1.xml" value="0.1085" />
+        <entry key="app/src/main/res/drawable/backgroundlayout.xml" value="0.1085" />
         <entry key="app/src/main/res/drawable/backgroundstyle1.xml" value="0.1085" />
         <entry key="app/src/main/res/drawable/backgroundstyle2.xml" value="0.1085" />
         <entry key="app/src/main/res/drawable/backgroundstyle3.xml" value="0.1085" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.26992753623188404" />
-        <entry key="app/src/main/res/layout/activity_search_actv.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_giphy.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_search_actv.xml" value="0.3003442340791738" />
         <entry key="app/src/main/res/layout/toolbarsearch.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/tyt.xml" value="0.25729166666666664" />
       </map>
     </option>
   </component>

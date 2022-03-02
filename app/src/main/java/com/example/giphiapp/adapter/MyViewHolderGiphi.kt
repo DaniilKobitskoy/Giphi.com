@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.giphiapp.R
 import com.example.giphiapp.model.GiphiModel
-import kotlinx.android.synthetic.main.activity_main.view.*
 
 class MyViewHolderGiphi(private val context: Context, private val movieList: GiphiModel): RecyclerView.Adapter<MyViewHolderGiphi.MyViewHolder>() {
 

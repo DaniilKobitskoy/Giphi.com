@@ -6,42 +6,30 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.giphiapp.adapter.MyViewHolderGiphi
 import com.example.giphiapp.common.Common
 import com.example.giphiapp.model.GiphiModel
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.giphiapp.searchActv.Companion.SEARCH_KEY
+import kotlinx.android.synthetic.main.activity_giphy.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.io.StringReader
 
-
 lateinit var mService: RetrofitClientGiphi
 lateinit var layoutManager: LinearLayoutManager
 lateinit var adapter: MyViewHolderGiphi
 
-
-
-
-
-class MainActivity : AppCompatActivity() {
+class GiphyAct : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-//
+        setContentView(R.layout.activity_giphy)
         var editText = findViewById<EditText>(R.id.edtText)
 //
-
-
-
-
-
-
-
-
-      mService = Common.retrofitService
+        mService = Common.retrofitService
         recycler_item.setLayoutManager(GridLayoutManager(this, 2))
         recycler_item.setHasFixedSize(true)
         layoutManager = LinearLayoutManager(this)
@@ -49,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         getAllMovieList()
     }
 
-var apikey: Any = "G15JgFWc0zCOV4JfylKfBT0T9DuOQzFJ"
+    var apikey: Any = "G15JgFWc0zCOV4JfylKfBT0T9DuOQzFJ"
     private fun getAllMovieList() {
         mService.getAllMovieList(apikey).enqueue(object : Callback<GiphiModel>
         {
@@ -57,14 +45,12 @@ var apikey: Any = "G15JgFWc0zCOV4JfylKfBT0T9DuOQzFJ"
                 adapter = MyViewHolderGiphi(baseContext, response.body() as GiphiModel)
                 adapter.notifyDataSetChanged()
                 Log.i("TAG2", response.body().toString())
-
                 recycler_item.adapter = adapter
                 recycler_item.layoutManager =
-                    LinearLayoutManager(this@MainActivity, LinearLayoutManager.VERTICAL, false)
+                    LinearLayoutManager(this@GiphyAct, LinearLayoutManager.VERTICAL, false)
             }
             override fun onFailure(call: Call<GiphiModel>, t: Throwable) {
-                val toast = Toast.makeText(this@MainActivity, "vvvv", Toast.LENGTH_SHORT).show()
-
+                val toast = Toast.makeText(this@GiphyAct, "vvvv", Toast.LENGTH_SHORT).show()
             }
         })
 
@@ -74,13 +60,11 @@ var apikey: Any = "G15JgFWc0zCOV4JfylKfBT0T9DuOQzFJ"
 
         when (view.getId()) {
             R.id.buttonSearch1 -> {
-                // Говорим между какими Activity будет происходить связь
+
                 val intent = Intent(this, searchActv::class.java)
-//                var editText = findViewById<EditText>(R.id.edtText)
-                // указываем первым параметром ключ, а второе значение
-                // по ключу мы будем получать значение с Intent
-//                intent.putExtra("giphy", editText.getText().toString())
-                // показываем новое Activity
+                val editText = findViewById<EditText>(R.id.edtText)
+                intent.putExtra(SEARCH_KEY, editText.text.toString())
+
                 startActivity(intent)
             }
             else -> {
