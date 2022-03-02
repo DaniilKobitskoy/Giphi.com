@@ -15,7 +15,12 @@
         android:background="@drawable/backgroundstyle1"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:hint="Найти"
+        android:inputType="textMultiLine"
+        android:paddingLeft="10dp"
+        android:paddingTop="8dp"
+        android:textAllCaps="false"
+        android:textColorHint="@color/black" />
 
     <Button
         android:onClick="submit"
