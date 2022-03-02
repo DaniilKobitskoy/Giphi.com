@@ -54,13 +54,21 @@ class GiphyAct : AppCompatActivity() {
             }
         })
     }
+
     fun goToNewView(view: View) {
         when (view.getId()) {
             R.id.buttonSearch1 -> {
+
+                if (edtText.length() > 0){
                 val intent = Intent(this, searchActv::class.java)
                 val editText = findViewById<EditText>(R.id.edtText)
                 intent.putExtra(SEARCH_KEY, editText.text.toString())
                 startActivity(intent)
+                }
+                else{
+                    val toast = Toast.makeText(this@GiphyAct, "Строка поиска пустая", Toast.LENGTH_SHORT).show()
+
+                }
             }
             else -> {
             }

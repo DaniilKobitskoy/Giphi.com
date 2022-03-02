@@ -42,7 +42,7 @@
             android:background="@drawable/backgroundstyle1"
             android:ems="10"
             android:hint="Поиск"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
             android:paddingLeft="10dp" />
 
         <Button
